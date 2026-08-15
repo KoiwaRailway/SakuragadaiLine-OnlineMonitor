@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>小岩鉄道桜ヶ台線列車走行位置</title>
+        <style>
+            body {
+                background-color: rgb(227, 227, 227);
+                margin: 0;
+            }
+
+            #svgDiv {
+                width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            img {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+            }
+
+            header {
+                background-color: #ffb2b2;
+                color: rgb(255, 255, 255);
+                padding: 2rem 0;
+                box-shadow: 0 4px 10px #000000;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            .textbox {
+                position: absolute;
+                width: 200px;
+                padding: 3px 7px;
+                border-radius: 8px;
+                border: 3px solid #ccc;
+            }
+
+            .textbox:focus {
+                outline: 0;
+                border: 2px solid #2196f3;
+            }
+
+            .TextBoxh1 {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 0;
+                padding: 10px 0;
+            }
+
+            .TextBoxh1 h2 {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .TextBoxh1 .textbox {
+                display: block;
+                width: 300px;
+                max-width: 90%;
+                padding: 10px 15px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>小岩鉄道桜ヶ台線列車走行位置</h1>
+        </header>
+        <h1>
+            <h2 class="TextBoxh1">
+                <input type="text" class="textbox" id="jobid" name="jobid" placeholder="JobIdの最初の8文字を入力">
+            </h2>
+        </h1>
+        <h1><br /></h1>
+        <div id="svgDiv">
+        <svg id="svgCanvas" width="850" height="2150">
+            <text x="250" y="35" font-size="30" font-weight="bold" text-anchor="middle" fill="black">上り線</text>
+            <text x="590" y="35" font-size="30" font-weight="bold" text-anchor="middle" fill="black">下り線</text>
+
+            <!-- 霞ヶ丘 -->
+            <line  x1="0" y1="150" x2="2000" y2="150" stroke="pink" stroke-width="3" />
+            <text x="45" y="130" font-size="30" font-weight="bold" text-anchor="middle" fill="black">霞ヶ丘</text>
+            <!-- 駅 -->
+            <line id = "kasumigaoka" x1="425" y1="100" x2="425" y2="150" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "kasumigaoka-aoicho" x1="425" y1="150" x2="425" y2="300" stroke="pink" stroke-width="3" />
+
+            
+            <!-- 葵町 -->
+            <line  x1="0" y1="350" x2="2000" y2="350" stroke="pink" stroke-width="3" />
+            <text x="45" y="330" font-size="30" font-weight="bold" text-anchor="middle" fill="black">葵町</text>
+            <!-- 駅 -->
+            <line id = "aoicho" x1="425" y1="300" x2="425" y2="350" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "aoicho-chihaya" x1="425" y1="350" x2="425" y2="500" stroke="pink" stroke-width="3" />
+
+
+            <!-- 千早 -->
+            <line  x1="0" y1="550" x2="2000" y2="550" stroke="pink" stroke-width="3" />
+            <text x="45" y="530" font-size="30" font-weight="bold" text-anchor="middle" fill="black">千早</text>
+            <!-- 駅 -->
+            <line id = "chihaya" x1="425" y1="500" x2="425" y2="550" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "chihaya-hanomori" x1="425" y1="550" x2="425" y2="700" stroke="pink" stroke-width="3" />
+
+
+            <!-- 羽ノ森 -->
+            <line  x1="0" y1="750" x2="2000" y2="750" stroke="pink" stroke-width="3" />
+            <text x="45" y="730" font-size="30" font-weight="bold" text-anchor="middle" fill="black">羽ノ森</text>
+            <!-- 駅 -->
+            <line id = "hanomori" x1="425" y1="700" x2="425" y2="750" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "hanomori-sinbara" x1="425" y1="750" x2="425" y2="900" stroke="pink" stroke-width="3" />
+
+
+            <!-- 新原 -->
+            <line  x1="0" y1="950" x2="2000" y2="950" stroke="pink" stroke-width="3" />
+            <text x="45" y="930" font-size="30" font-weight="bold" text-anchor="middle" fill="black">新原</text>
+            <!-- 駅 -->
+            <line id = "sinbara" x1="425" y1="900" x2="425" y2="950" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "sinbara-sakuragadai" x1="425" y1="950" x2="425" y2="1100" stroke="pink" stroke-width="3" />
+
+
+            <!-- 桜ヶ台 -->
+            <line  x1="0" y1="1150" x2="2000" y2="1150" stroke="pink" stroke-width="3" />
+            <text x="45" y="1130" font-size="30" font-weight="bold" text-anchor="middle" fill="black">桜ヶ台</text>
+            <!-- 駅 -->
+            <line id = "sakuragadai" x1="425" y1="1100" x2="425" y2="1150" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "sakuragadai-onoya" x1="425" y1="1150" x2="425" y2="1300" stroke="pink" stroke-width="3" />
+
+
+            <!-- 小野谷 -->
+            <line  x1="0" y1="1350" x2="2000" y2="1350" stroke="pink" stroke-width="3" />
+            <text x="45" y="1330" font-size="30" font-weight="bold" text-anchor="middle" fill="black">小野谷</text>
+            <!-- 駅 -->
+            <line id = "onoya" x1="425" y1="1300" x2="425" y2="1350" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "onoya-midorihara" x1="425" y1="1350" x2="425" y2="1500" stroke="pink" stroke-width="3" />
+
+
+            <!-- 緑原 -->
+            <line  x1="0" y1="1550" x2="2000" y2="1550" stroke="pink" stroke-width="3" />
+            <text x="45" y="1530" font-size="30" font-weight="bold" text-anchor="middle" fill="black">緑原</text>
+            <!-- 駅 -->
+            <line id = "midorihara" x1="425" y1="1500" x2="425" y2="1550" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "midorihara-sirasagi" x1="425" y1="1550" x2="425" y2="1700" stroke="pink" stroke-width="3" />
+
+
+            <!-- 白鷺 -->
+            <line  x1="0" y1="1750" x2="2000" y2="1750" stroke="pink" stroke-width="3" />
+            <text x="45" y="1730" font-size="30" font-weight="bold" text-anchor="middle" fill="black">白鷺</text>
+            <!-- 駅 -->
+            <line id = "sirasagi" x1="425" y1="1700" x2="425" y2="1750" stroke="pink" stroke-width="3" />
+            <!-- 駅間 -->
+            <line id = "sirasagi-aomine" x1="425" y1="1750" x2="425" y2="1900" stroke="pink" stroke-width="3" />
+
+
+            <!-- 青峰 -->
+            <line  x1="0" y1="1950" x2="2000" y2="1950" stroke="pink" stroke-width="3" />
+            <text x="45" y="1930" font-size="30" font-weight="bold" text-anchor="middle" fill="black">青峰</text>
+            <!-- 駅 -->
+            <line id = "aomine" x1="425" y1="1900" x2="425" y2="1950" stroke="pink" stroke-width="3" />
+        </svg>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
