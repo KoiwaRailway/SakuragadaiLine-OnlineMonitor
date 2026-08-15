@@ -1,14 +1,12 @@
 <!DOCTYPE html>
     <html lang="ja">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>小岩鉄道桜ヶ台線列車走行位置</title>
         <style>
             body {
                 background-color: rgb(227, 227, 227);
                 margin: 0;
-                overflow-x: hidden; 
             }
 
             #svgDiv {
@@ -18,8 +16,9 @@
             }
 
             img {
-                max-width: 100%;
-                height: auto;
+                position: absolute;
+                top: 5px;
+                left: 5px;
             }
 
             header {
@@ -36,12 +35,11 @@
             }
 
             .textbox {
-                width: 100%;
-                max-width: 300px;
-                padding: 10px 15px;
+                position: absolute;
+                width: 200px;
+                padding: 3px 7px;
                 border-radius: 8px;
                 border: 3px solid #ccc;
-                box-sizing: border-box;
             }
 
             .textbox:focus {
@@ -50,27 +48,25 @@
             }
 
             .TextBoxh1 {
+                position: absolute;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
                 margin: 0;
                 padding: 10px 0;
-                box-sizing: border-box;
             }
 
             .TextBoxh1 h2 {
                 display: flex;
                 justify-content: center;
                 width: 100%;
-                margin: 0 0 10px 0;
             }
 
             .TextBoxh1 .textbox {
                 display: block;
-                width: 90%;
-                max-width: 300px;
+                width: 300px;
+                max-width: 90%;
                 padding: 10px 15px;
                 text-align: center;
                 box-sizing: border-box;
