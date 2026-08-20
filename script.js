@@ -183,4 +183,4 @@ function fetchJsonData() {
 }
 
 fetchJsonData();
-setInterval(fetchJsonData, 15000);
+setInterval(fetchJsonData, 20000);
